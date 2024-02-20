@@ -12,6 +12,12 @@
       <div v-if="album" class="albumDetail">
         <h3>{{ album.title }}</h3>
         <h3>{{ album.id }}</h3>
+        {{album}}
+        <h3><RouterLink to="{name: 'artist',
+                              params: {
+                                parameter : 'album.artist.id'
+                              }
+                              }">{{album.artist}}</RouterLink></h3>
         <img :src="album.cover_medium" :alt="album.title" />
         <p>Date de sortie : {{ album.release_date }}</p>
         <a>Lien : {{ album.link }}</a>
