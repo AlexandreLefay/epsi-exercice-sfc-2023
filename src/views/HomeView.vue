@@ -1,9 +1,9 @@
 <script setup>
-import DisplayAlbum from "@/components/DisplayAlbum.vue";
+import Searchbar from "@/components/Searchbar.vue";
 </script>
 
 <template>
   <main>
-    <DisplayAlbum />
+    <Searchbar/>
   </main>
 </template>
