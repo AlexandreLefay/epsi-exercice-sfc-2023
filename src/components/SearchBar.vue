@@ -13,7 +13,7 @@ Vue.createApp({
   },
 
   watch: {
-    piscines: "fetchDataPromise",
+    listMusique: "fetchDataPromise",
   },
 
   methods: {
@@ -38,7 +38,7 @@ Vue.createApp({
 <!--      isLoading: true,-->
 <!--      handleError: null,-->
 <!--      musique: null,-->
-<!--      // TODO: Remplacez 'Enter Track ID Here' par un ID de musique valide reçu de la searchbar-->
+<!--      ODO: Remplacez 'Enter Track ID Here' par un ID de musique valide reçu de la searchbar-->
 <!--      trackId: '3135556',-->
 <!--    };-->
 <!--  },-->
@@ -69,7 +69,7 @@ Vue.createApp({
 <!--</script>-->
 
 <template>
-  <p>{{listM}}</p>
+  <p>{{listMusique.data}}</p>
   <input type="text" v-model="input" placeholder="Recherchez une musique..." />
   <div class="item musique" v-for="musique in filteredList()" :key="musique">
     <p>{{ musique }} {{artistes}}</p>
