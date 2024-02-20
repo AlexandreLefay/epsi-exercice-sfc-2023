@@ -23,9 +23,33 @@ export default {
 </script>
 
 <template>
-  <h1>{{artist}}</h1>
+  <h1>{{artist.name}}</h1>
+  <img :src="artist.picture" alt="Photo de l'artiste">
+
+  <p>Nombre d'albums: {{ artist.nb_album }}</p>
+  <p>Nombre de fans: {{ artist.nb_fan }}</p>
 </template>
 
 <style scoped>
+* {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 20px;
+}
 
+h1 {
+  color: #333;
+}
+
+img {
+
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+p {
+  color: #555;
+}
 </style>
